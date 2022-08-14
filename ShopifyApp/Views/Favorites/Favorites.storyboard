@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="YPw-DP-KBC">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesVC" id="mFG-rN-nKo" customClass="FavoritesViewController" customModule="ShopifyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gRe-CL-my0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZR-pw-NGL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Favorites" id="KqB-2s-WtG">
+                                        <barButtonItem key="leftBarButtonItem" id="OJo-fF-emt">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" renderingMode="hierarchical-single">
+                                                <hierarchicalColors>
+                                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color systemColor="secondaryLabelColor"/>
+                                                    <color systemColor="tertiaryLabelColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                            <connections>
+                                                <action selector="onBackButtonPressed:" destination="mFG-rN-nKo" id="fkE-jV-gBd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pIx-W5-uwE">
+                                <rect key="frame" x="16" y="104" width="382" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GwU-8a-Kus">
+                                    <size key="itemSize" width="155" height="155"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ecd-GG-B88">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3LJ-bT-tT2">
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HxB-af-t9p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yZR-pw-NGL" firstAttribute="leading" secondItem="HxB-af-t9p" secondAttribute="leading" id="7hA-Cj-vE1"/>
+                            <constraint firstItem="pIx-W5-uwE" firstAttribute="top" secondItem="yZR-pw-NGL" secondAttribute="bottom" constant="16" id="8Ym-lz-mhr"/>
+                            <constraint firstItem="pIx-W5-uwE" firstAttribute="leading" secondItem="HxB-af-t9p" secondAttribute="leading" constant="16" id="9Ng-Rj-6FZ"/>
+                            <constraint firstItem="yZR-pw-NGL" firstAttribute="top" secondItem="HxB-af-t9p" secondAttribute="top" id="BbH-uL-ZFS"/>
+                            <constraint firstItem="HxB-af-t9p" firstAttribute="trailing" secondItem="pIx-W5-uwE" secondAttribute="trailing" constant="16" id="Q6R-Bf-a4v"/>
+                            <constraint firstItem="HxB-af-t9p" firstAttribute="bottom" secondItem="pIx-W5-uwE" secondAttribute="bottom" id="mas-me-XeZ"/>
+                            <constraint firstAttribute="trailing" secondItem="yZR-pw-NGL" secondAttribute="trailing" id="tMI-wo-E6c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favoritesCollectionView" destination="pIx-W5-uwE" id="MfW-zA-byF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lo6-E4-II2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

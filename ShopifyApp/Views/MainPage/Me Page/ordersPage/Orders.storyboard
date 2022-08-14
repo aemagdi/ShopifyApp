@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Orders View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ordersPageID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OrdersViewController" customModule="ShopifyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k96-wS-6h7">
+                                <rect key="frame" x="20" y="103" width="49.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.16796695256906652" green="0.16789345754293999" blue="0.4080650252525253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffY-d3-bUs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="My Orders" id="hk3-QO-ae2">
+                                        <barButtonItem key="leftBarButtonItem" id="3PB-uz-sMo">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" renderingMode="hierarchical-single">
+                                                <hierarchicalColors>
+                                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color systemColor="secondaryLabelColor"/>
+                                                    <color systemColor="tertiaryLabelColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                            <color key="tintColor" systemColor="systemIndigoColor"/>
+                                            <connections>
+                                                <action selector="onBackButton:" destination="Y6W-OH-hqX" id="aGf-00-skX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="evm-DM-Wgv">
+                                <rect key="frame" x="32" y="150" width="350" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffY-d3-bUs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2xv-4H-daY"/>
+                            <constraint firstItem="evm-DM-Wgv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="3fQ-fD-mgi"/>
+                            <constraint firstItem="evm-DM-Wgv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="106" id="8KE-M5-UTJ"/>
+                            <constraint firstItem="k96-wS-6h7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="DbQ-yc-mHm"/>
+                            <constraint firstItem="evm-DM-Wgv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KVd-DI-REl"/>
+                            <constraint firstItem="k96-wS-6h7" firstAttribute="top" secondItem="ffY-d3-bUs" secondAttribute="bottom" constant="15" id="Zwk-o4-tfO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="evm-DM-Wgv" secondAttribute="trailing" constant="32" id="bfM-jM-nRy"/>
+                            <constraint firstItem="k96-wS-6h7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="heD-hd-QgX"/>
+                            <constraint firstItem="evm-DM-Wgv" firstAttribute="top" secondItem="k96-wS-6h7" secondAttribute="bottom" constant="24" id="hxV-jT-Kn9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="evm-DM-Wgv" secondAttribute="bottom" constant="45" id="ost-rA-zYA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ffY-d3-bUs" secondAttribute="trailing" id="pMe-jB-fR7"/>
+                            <constraint firstItem="ffY-d3-bUs" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="-20" id="xuL-Z6-mfp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ordersLabel" destination="k96-wS-6h7" id="j4v-RB-gMi"/>
+                        <outlet property="ordersTable" destination="evm-DM-Wgv" id="pqh-e0-PSQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

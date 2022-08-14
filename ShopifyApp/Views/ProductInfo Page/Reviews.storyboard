@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reviews View Controller-->
+        <scene sceneID="9ec-rh-Sie">
+            <objects>
+                <viewController storyboardIdentifier="ReviewsVC" id="cqS-tu-qdD" customClass="ReviewsViewController" customModule="ShopifyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdk-Lt-0Ml">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvZ-QW-8qU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Reviews" id="c7q-tr-3fc">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="92f-lr-01a">
+                                            <connections>
+                                                <action selector="onBackButtonPressed:" destination="cqS-tu-qdD" id="BYv-vC-xeH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9rX-dc-41v">
+                                <rect key="frame" x="16" y="104" width="382" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Db7-oe-0Xj">
+                                        <rect key="frame" x="0.0" y="28" width="382" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Db7-oe-0Xj" id="Gqf-NM-KEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dvZ-QW-8qU" firstAttribute="top" secondItem="loh-mW-QYT" secondAttribute="top" id="0jF-BD-UH3"/>
+                            <constraint firstItem="9rX-dc-41v" firstAttribute="top" secondItem="dvZ-QW-8qU" secondAttribute="bottom" constant="16" id="5Sv-ok-z63"/>
+                            <constraint firstItem="dvZ-QW-8qU" firstAttribute="trailing" secondItem="loh-mW-QYT" secondAttribute="trailing" id="7Rp-Ik-WuG"/>
+                            <constraint firstItem="loh-mW-QYT" firstAttribute="trailing" secondItem="9rX-dc-41v" secondAttribute="trailing" constant="16" id="GMd-JQ-wCL"/>
+                            <constraint firstItem="9rX-dc-41v" firstAttribute="leading" secondItem="loh-mW-QYT" secondAttribute="leading" constant="16" id="JL2-jv-YqX"/>
+                            <constraint firstItem="loh-mW-QYT" firstAttribute="bottom" secondItem="9rX-dc-41v" secondAttribute="bottom" id="Jon-Z4-GUc"/>
+                            <constraint firstItem="dvZ-QW-8qU" firstAttribute="leading" secondItem="loh-mW-QYT" secondAttribute="leading" id="r3s-g6-zRe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="loh-mW-QYT"/>
+                    </view>
+                    <connections>
+                        <outlet property="reviewsTable" destination="9rX-dc-41v" id="j7C-tr-2Wb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyl-Gu-FbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145" y="69"/>
+        </scene>
+    </scenes>
+</document>

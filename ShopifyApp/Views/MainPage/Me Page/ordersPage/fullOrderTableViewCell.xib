@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fullOrderCellID" rowHeight="144" id="KGk-i7-Jjw" customClass="fullOrderTableViewCell" customModule="ShopifyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0f-0G-hNF">
+                        <rect key="frame" x="0.0" y="10" width="320" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" text="Created at" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-fW-sNc">
+                        <rect key="frame" x="0.0" y="37" width="320" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="customer's email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-ex-Kle">
+                        <rect key="frame" x="0.0" y="89" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" text="Total price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e66-JJ-3y3">
+                        <rect key="frame" x="0.0" y="115" width="320" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Customer's name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-Jb-mSW">
+                        <rect key="frame" x="0.0" y="63" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="e66-JJ-3y3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5Kn-qm-6b5"/>
+                    <constraint firstItem="e66-JJ-3y3" firstAttribute="top" secondItem="Znw-ex-Kle" secondAttribute="bottom" constant="5" id="EvZ-9P-xNA"/>
+                    <constraint firstItem="d2X-fW-sNc" firstAttribute="top" secondItem="s0f-0G-hNF" secondAttribute="bottom" constant="5" id="KJh-hv-j9Z"/>
+                    <constraint firstAttribute="bottom" secondItem="e66-JJ-3y3" secondAttribute="bottom" constant="10" id="OiD-2i-exF"/>
+                    <constraint firstItem="Qef-Jb-mSW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-16" id="Sly-d6-dqs"/>
+                    <constraint firstItem="s0f-0G-hNF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UFF-YA-Wip"/>
+                    <constraint firstItem="Qef-Jb-mSW" firstAttribute="top" secondItem="d2X-fW-sNc" secondAttribute="bottom" constant="5" id="VRd-OI-MTA"/>
+                    <constraint firstItem="Qef-Jb-mSW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-8" id="VcI-B3-2Pk"/>
+                    <constraint firstItem="s0f-0G-hNF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XPE-Tm-8Dt"/>
+                    <constraint firstItem="e66-JJ-3y3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="XvO-b5-pGo"/>
+                    <constraint firstItem="d2X-fW-sNc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dcZ-e6-yHL"/>
+                    <constraint firstItem="d2X-fW-sNc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="faB-3Y-r1P"/>
+                    <constraint firstItem="s0f-0G-hNF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hrN-VK-hS1"/>
+                    <constraint firstItem="Znw-ex-Kle" firstAttribute="top" secondItem="Qef-Jb-mSW" secondAttribute="bottom" constant="5" id="i8N-Vy-VUB"/>
+                    <constraint firstItem="Znw-ex-Kle" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-16" id="som-VE-C3N"/>
+                    <constraint firstItem="Znw-ex-Kle" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-8" id="xjq-Sj-FTq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="customerEmail" destination="Znw-ex-Kle" id="pBT-Ph-SXA"/>
+                <outlet property="customerName" destination="Qef-Jb-mSW" id="GMC-aQ-sSZ"/>
+                <outlet property="orderCreatedAt" destination="d2X-fW-sNc" id="aGu-Km-aXh"/>
+                <outlet property="orderID" destination="s0f-0G-hNF" id="dNZ-d4-1dy"/>
+                <outlet property="orderPrice" destination="e66-JJ-3y3" id="e1E-hP-oAl"/>
+            </connections>
+            <point key="canvasLocation" x="108.69565217391305" y="-11.383928571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

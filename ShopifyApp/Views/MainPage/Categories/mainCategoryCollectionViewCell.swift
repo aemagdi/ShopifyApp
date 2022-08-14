@@ -1,0 +1,19 @@
+//
+//  mainCategoryCollectionViewCell.swift
+//  ShopifyApp
+//
+//  Created by Abdelrahman Magdy on 11/07/2022.
+//  Copyright © 2022 Mina Ezzat. All rights reserved.
+//
+
+import UIKit
+
+class mainCategoryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var mainCategoryLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+}
